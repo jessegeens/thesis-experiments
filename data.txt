@@ -1,0 +1,22 @@
+----- Output vanilla CSS -----
+Starting experiments
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-10-pretty.json finished after 54.60000002384186
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-100-pretty.json finished after 41.299999952316284
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-1000-pretty.json finished after 65.29999995231628
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-10000-pretty.json finished after 111.19999992847443
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-10-pretty.json finished after 8.200000047683716
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-100-pretty.json finished after 12
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-1000-pretty.json finished after 12
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-10000-pretty.json finished after 30.799999952316284
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-10-pretty.json finished after 24.90000009536743
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-100-pretty.json finished after 8.799999952316284
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-1000-pretty.json finished after 11.099999904632568
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-10000-pretty.json finished after 41.199999928474426
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-10-pretty.json finished after 19.5
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-100-pretty.json finished after 10.100000023841858
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-1000-pretty.json finished after 16.899999976158142
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-10000-pretty.json finished after 37.699999928474426
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-10-pretty.json finished after 6.300000071525574
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-100-pretty.json finished after 14.100000023841858
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-1000-pretty.json finished after 9.799999952316284
+experiments.js:68 Fetching http://localhost:3000/jesse/benchmark/output-10000-pretty.json finished after 32.89999997615814
