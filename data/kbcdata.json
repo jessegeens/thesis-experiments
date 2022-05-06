@@ -1,0 +1,98 @@
+{
+    "accountOwner":"Allen Lockman",
+    "IBAN":"SI28200630900140046",
+    "saldo":47619,
+    "currency":"EUR",
+    "history":[
+      {
+        "from":"SK7000040045081034071265",
+        "from_name":"Archie Franecki",
+        "to":"SI28200630900140046",
+        "to_name":"Allen Lockman",
+        "amount":873,
+        "timestamp":1627881394469,
+        "description":"Computers Bedfordshire Pizza 1080p"
+      },
+      {
+        "from":"LV54VGGX19482389767C9",
+        "from_name":"Clinton Green",
+        "to":"SI28200630900140046",
+        "to_name":"Allen Lockman",
+        "amount":567,
+        "timestamp":1637878184939,
+        "description":"Markets Handmade static Orchestrator Response Chicken Maine Streamlined"
+      },
+      {
+        "to":"PS7379ZS357808001737094003990",
+        "to_name":"Ms. Henry Mueller",
+        "from":"SI28200630900140046",
+        "from_name":"Allen Lockman",
+        "amount":523,
+        "timestamp":1584173148107,
+        "description":""
+      },
+      {
+        "from":"TL230019300682466180088",
+        "from_name":"Ben Green",
+        "to":"SI28200630900140046",
+        "to_name":"Allen Lockman",
+        "amount":373,
+        "timestamp":1558789771367,
+        "description":"Circle"
+      },
+      {
+        "from":"TR250228620013550050090002",
+        "from_name":"Angel Hayes DDS",
+        "to":"SI28200630900140046",
+        "to_name":"Allen Lockman",
+        "amount":271,
+        "timestamp":1598171068239,
+        "description":"Chair transmitting International Keyboard Cambridgeshire Berkshire Cambridgeshire"
+      },
+      {
+        "from":"GB80FGKW01021507094891",
+        "from_name":"Abraham Beatty",
+        "to":"SI28200630900140046",
+        "to_name":"Allen Lockman",
+        "amount":765,
+        "timestamp":1633288428964,
+        "description":"Islands Buckinghamshire application Agent holistic maroon Refined magnetic"
+      },
+      {
+        "from":"SE7396016008008088554079",
+        "from_name":"Agnes Lindgren",
+        "to":"SI28200630900140046",
+        "to_name":"Allen Lockman",
+        "amount":572,
+        "timestamp":1607834777219,
+        "description":""
+      },
+      {
+        "to":"QA64DCZV9L57893761WTN20741466",
+        "to_name":"Conrad Baumbach",
+        "from":"SI28200630900140046",
+        "from_name":"Allen Lockman",
+        "amount":341,
+        "timestamp":1563157788406,
+        "description":"Functionality Tuvalu plum open-source Security"
+      },
+      {
+        "from":"ES7295609398430980308412",
+        "from_name":"Gerardo Moen",
+        "to":"SI28200630900140046",
+        "to_name":"Allen Lockman",
+        "amount":923,
+        "timestamp":1571583754199,
+        "description":"architect Mews solution Rustic groupware calculate challenge"
+      },
+      {
+        "to":"CY42089880309684015249682561",
+        "to_name":"Yvette Ledner",
+        "from":"SI28200630900140046",
+        "from_name":"Allen Lockman",
+        "amount":499,
+        "timestamp":1639491089720,
+        "description":"Central Incredible RAM vertical"
+      }
+    ]
+  }

@@ -1,0 +1,5 @@
+node_modules/*
+
+# One package was modified to work in a Node environment
+!node_modules/dpop/
+!node_modules/@solid/access-token-verifier/

@@ -1,0 +1,26 @@
+{
+  "name": "dpop",
+  "description": "DPoP for the browser",
+  "version": "0.6.0",
+  "license": "MIT",
+  "files": [
+    "dist-*/"
+  ],
+  "pika": true,
+  "sideEffects": false,
+  "keywords": [
+    "browser",
+    "dpop",
+    "oauth"
+  ],
+  "homepage": "https://github.com/panva/dpop",
+  "repository": "panva/dpop",
+  "source": "dist-src/index.js",
+  "types": "dist-types/index.d.ts",
+  "module": "dist-web/index.js",
+  "author": "Filip Skokan <panva.ip@gmail.com>",
+  "funding": "https://github.com/sponsors/panva",
+  "type": "module",
+  "main": "dist-src/index.js",
+  "browser": "dist-web/index.min.js"
+}

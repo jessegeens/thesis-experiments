@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?><TrainingCenterDatabase xmlns="http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/ActivityExtension/v2 http://www.garmin.com/xmlschemas/ActivityExtensionv2.xsd http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2 http://www.garmin.com/xmlschemas/TrainingCenterDatabasev2.xsd"><Activities>
+    <Activity>
+        <Id>2019-08-27T22:20:23.910Z</Id>
+        <Lap StartTime="1582108278946">
+            <TotalTimeSeconds>29083</TotalTimeSeconds>
+            <DistanceMeters>5029</DistanceMeters>
+            <MaximumSpeed>19</MaximumSpeed>
+            <Calories>713</Calories>
+            <AverageHeartRateBpm xsi:type="HeartRateInBeatsPerMinute_t">
+                <Value>178</Value>
+            </AverageHeartRateBpm>
+            <MaximumHeartRateBpm xsi:type="HeartRateInBeatsPerMinute_t">
+                <Value>184</Value>
+            </MaximumHeartRateBpm>
+            <Intensity>Active</Intensity>
+            <Cadence>76</Cadence>
+            <TriggerMethod>Location</TriggerMethod>
+            <Track>
+                <TrackPoint>
+                    <Time>2020-10-19T07:00:16.670Z</Time>
+                    <Position>
+                        <LatitudeDegrees>40.7780135</LatitudeDegrees>
+                        <LongitudeDegrees>-73.9665795</LongitudeDegrees>
+                    </Position>
+                    <DistanceMeters>0</DistanceMeters>
+                    <HeartRateBpm xsi:type="HeartRateInBeatsPerMinute_t">
+                        <Value>173</Value>
+                    </HeartRateBpm>
+                    <SensorState>Absent</SensorState>
+                </TrackPoint>
+                <TrackPoint>
+                    <Time>2020-10-19T07:00:21.670Z</Time>
+                    <Position>
+                        <LatitudeDegrees>40.7780135</LatitudeDegrees>
+                        <LongitudeDegrees>-73.96647949999999</LongitudeDegrees>
+                    </Position>
+                    <DistanceMeters>502.9</DistanceMeters>
+                    <HeartRateBpm xsi:type="HeartRateInBeatsPerMinute_t">
+                        <Value>150</Value>
+                    </HeartRateBpm>
+                    <SensorState>Absent</SensorState>
+                </TrackPoint>
+                <TrackPoint>
+                    <Time>2020-10-19T07:00:26.670Z</Time>
+                    <Position>
+                        <LatitudeDegrees>40.7780135</LatitudeDegrees>
+                        <LongitudeDegrees>-73.96637949999999</LongitudeDegrees>
+                    </Position>
+                    <DistanceMeters>1005.8</DistanceMeters>
+                    <HeartRateBpm xsi:type="HeartRateInBeatsPerMinute_t">
+                        <Value>169</Value>
+                    </HeartRateBpm>
+                    <SensorState>Absent</SensorState>
+                </TrackPoint>
+                <TrackPoint>
+                    <Time>2020-10-19T07:00:31.670Z</Time>
+                    <Position>
+                        <LatitudeDegrees>40.7780135</LatitudeDegrees>
+                        <LongitudeDegrees>-73.9662795</LongitudeDegrees>
+                    </Position>
+                    <DistanceMeters>1508.6999999999998</DistanceMeters>
+                    <HeartRateBpm xsi:type="HeartRateInBeatsPerMinute_t">
+                        <Value>173</Value>
+                    </HeartRateBpm>
+                    <SensorState>Absent</SensorState>
+                </TrackPoint>
+                <TrackPoint>
+                    <Time>2020-10-19T07:00:36.670Z</Time>
+                    <Position>
+                        <LatitudeDegrees>40.7780135</LatitudeDegrees>
+                        <LongitudeDegrees>-73.9661795</LongitudeDegrees>
+                    </Position>
+                    <DistanceMeters>2011.6</DistanceMeters>
+                    <HeartRateBpm xsi:type="HeartRateInBeatsPerMinute_t">
+                        <Value>152</Value>
+                    </HeartRateBpm>
+                    <SensorState>Absent</SensorState>
+                </TrackPoint>
+                <TrackPoint>
+                    <Time>2020-10-19T07:00:41.670Z</Time>
+                    <Position>
+                        <LatitudeDegrees>40.7780135</LatitudeDegrees>
+                        <LongitudeDegrees>-73.96607949999999</LongitudeDegrees>
+                    </Position>
+                    <DistanceMeters>2514.5</DistanceMeters>
+                    <HeartRateBpm xsi:type="HeartRateInBeatsPerMinute_t">
+                        <Value>153</Value>
+                    </HeartRateBpm>
+                    <SensorState>Absent</SensorState>
+                </TrackPoint>
+                <TrackPoint>
+                    <Time>2020-10-19T07:00:46.670Z</Time>
+                    <Position>
+                        <LatitudeDegrees>40.7780135</LatitudeDegrees>
+                        <LongitudeDegrees>-73.96597949999999</LongitudeDegrees>
+                    </Position>
+                    <DistanceMeters>3017.3999999999996</DistanceMeters>
+                    <HeartRateBpm xsi:type="HeartRateInBeatsPerMinute_t">
+                        <Value>160</Value>
+                    </HeartRateBpm>
+                    <SensorState>Absent</SensorState>
+                </TrackPoint>
+                <TrackPoint>
+                    <Time>2020-10-19T07:00:51.670Z</Time>
+                    <Position>
+                        <LatitudeDegrees>40.7780135</LatitudeDegrees>
+                        <LongitudeDegrees>-73.9658795</LongitudeDegrees>
+                    </Position>
+                    <DistanceMeters>3520.2999999999997</DistanceMeters>
+                    <HeartRateBpm xsi:type="HeartRateInBeatsPerMinute_t">
+                        <Value>151</Value>
+                    </HeartRateBpm>
+                    <SensorState>Absent</SensorState>
+                </TrackPoint>
+                <TrackPoint>
+                    <Time>2020-10-19T07:00:56.670Z</Time>
+                    <Position>
+                        <LatitudeDegrees>40.7780135</LatitudeDegrees>
+                        <LongitudeDegrees>-73.9657795</LongitudeDegrees>
+                    </Position>
+                    <DistanceMeters>4023.2</DistanceMeters>
+                    <HeartRateBpm xsi:type="HeartRateInBeatsPerMinute_t">
+                        <Value>165</Value>
+                    </HeartRateBpm>
+                    <SensorState>Absent</SensorState>
+                </TrackPoint>
+                <TrackPoint>
+                    <Time>2020-10-19T07:01:01.670Z</Time>
+                    <Position>
+                        <LatitudeDegrees>40.7780135</LatitudeDegrees>
+                        <LongitudeDegrees>-73.9656795</LongitudeDegrees>
+                    </Position>
+                    <DistanceMeters>4526.099999999999</DistanceMeters>
+                    <HeartRateBpm xsi:type="HeartRateInBeatsPerMinute_t">
+                        <Value>181</Value>
+                    </HeartRateBpm>
+                    <SensorState>Absent</SensorState>
+                </TrackPoint>
+            </Track>
+        </Lap>
+    </Activity>
+</Activities>
+</TrainingCenterDatabase>
