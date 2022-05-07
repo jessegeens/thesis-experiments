@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "crypto-random-string": "^4.0.0",
+    "jose": "^4.8.1",
     "macaroons.js": "^0.3.9",
     "uuid": "^8.3.2"
   }

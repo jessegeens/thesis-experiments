@@ -2,10 +2,13 @@ import macaroon from 'macaroons.js';
 const MacaroonsBuilder = macaroon.MacaroonsBuilder;
 const MacaroonsVerifier = macaroon.MacaroonsVerifier;
 import {v4 as uuid} from "uuid";
-import { createSolidTokenVerifier } from '../../access-token-verifier/dist/index.js';
 import { PerformanceObserver, performance } from 'perf_hooks';
 import DPoP, { generateKeyPair } from '../../dpop/dist-src/index.js';
 import { webcrypto as crypto } from "node:crypto";
+import { calculateJwkThumbprint }from 'jose'
+import { verifyDpopProof } from './verifyDpop.js';
+
+
 
 // Counter replay attacks by keeping used identifiers
 function IdentifierVerifier(caveat) {
@@ -35,7 +38,7 @@ function TimestampVerifier(caveat) {
 
 
 // Experiment 1 -> Verify Macaroons throughput
-{ /*
+{ 
 // Parameters
 let noOfSeconds = 60;
 const myFile = "myFile";
@@ -69,11 +72,11 @@ while (performance.now() < start + noOfSeconds * 1000) {
 }
 
 console.log(`Verified ${count} macaroons in ${noOfSeconds} seconds`)
-*/ }
+}
 
 
 // Experiment 2 -> Generate Macaroons throughput
-{ /*
+{ 
 // Parameters
 let noOfSeconds = 60;
 const myFile = "myFile";
@@ -99,11 +102,11 @@ while (performance.now() < start + noOfSeconds * 1000) {
 }
 
 console.log(`Generated ${count} macaroons in ${noOfSeconds} seconds`);
-*/ }
+}
 
 
 // Experiment 3 -> Generate DPoP throughput
-{ /*
+{ 
     // Parameters
     let noOfSeconds = 60;
     const myFile = "myFile";
@@ -119,11 +122,11 @@ console.log(`Generated ${count} macaroons in ${noOfSeconds} seconds`);
 
     while (performance.now() < start + noOfSeconds * 1000) {
         count++;
-        const protectedResourceAccessProof = await DPoP(keypair, alg, `${location}/${myFile}`, myMethod, accessTokenValue);
+        await DPoP(keypair, alg, `${location}/${myFile}`, myMethod, accessTokenValue);
     }
     
     console.log(`Generated ${count} DPoP tokens in ${noOfSeconds} seconds`);
-*/ }
+}
 
 
 // Experiment 4 -> Verify DPoP throughput
@@ -137,43 +140,31 @@ console.log(`Generated ${count} macaroons in ${noOfSeconds} seconds`);
     const alg = 'ES256';
     const keypair = await generateKeyPair(alg);
     const myUrl = `${location}${myFile}`
-    const protectedResourceAccessProof = await DPoP(keypair, alg, myUrl, myMethod, accessTokenValue, 
+    const accessProof = await DPoP(keypair, alg, myUrl, myMethod, accessTokenValue, 
         {
             webid: `${location}jesse/profile/card#me`,
             iss: location,
-            aud: 'audience',
-            exp: Date.now() + (noOfSeconds + 10) * 1000 
+            aud: 'solid',
+            exp: Date.now() + (noOfSeconds + 10) * 1000,
         }
     );
 
-    //const cache = new SolidTokenVerifier();
-    //const solidOidcAccessTokenVerifier = cache.verify.bind(cache);
+    const publicJwk = await crypto.subtle.exportKey("jwk", keypair.publicKey);
+    const publicThumbprint = await calculateJwkThumbprint(publicJwk);
 
-    const solidOidcAccessTokenVerifier = createSolidTokenVerifier();
-
-    //console.log("protected resource access proof: " + protectedResourceAccessProof)
     let count = 0;
     let start = performance.now();
 
-   // try {
-    const { client_id, webid} = await solidOidcAccessTokenVerifier(
-        `DPoP ${protectedResourceAccessProof}`,
-        keypair.publicKey,
-        {
-          //header: protectedResourceAccessProof,
-          method: myMethod,
-          url: myUrl
-        }
-      );
-    console.log(`Client id: ${client_id}, webid: ${webid}`)
-   /* } catch (err) {
-        console.log("Error occured: " + err)
-    }*/
-   
-
-    /*while (performance.now() < start + noOfSeconds * 1000) {
+    while (performance.now() < start + noOfSeconds * 1000) {
         count++;
-    }*/
+        await verifyDpopProof(publicThumbprint, accessProof, alg, {
+            webid: `${location}jesse/profile/card#me`,
+            location: location,
+            aud: 'solid',
+            url: myUrl,
+            method: myMethod
+        });
+    }
     
     console.log(`Verified ${count} DPoP tokens in ${noOfSeconds} seconds`);
 }

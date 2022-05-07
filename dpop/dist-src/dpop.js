@@ -8,6 +8,7 @@ async function toJWK(publicKey) {
     const { kty, x, y, e, n, crv } = await crypto.subtle.exportKey("jwk", publicKey);
     return { kty, x, y, e, n, crv };
 }
+
 export default async (keypair, alg, htu, htm, accessToken, additional) => {
     const jwk = await toJWK(keypair.publicKey);
     return JWT(keypair.privateKey, { typ: "dpop+jwt", alg, jwk }, {
