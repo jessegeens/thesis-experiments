@@ -6,6 +6,8 @@ The `dpop` library is based on [panva/dpop](https://github.com/panva/dpop), but 
 
 The `pepsa-benchmark` tool is partially based on the [demo app from Inrupt](https://github.com/inrupt/solid-client-authn-js/tree/main/packages/browser/examples/demoClientApp).
 
+The `verifyDpop` module in the `macaroons-benchmark` tool is based on an example implementation from the [jose library](https://github.com/panva/jose/discussions/99).
+
 ## Available tools
 
 ### Data generator
