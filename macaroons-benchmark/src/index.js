@@ -69,6 +69,8 @@ while (performance.now() < start + noOfSeconds * 1000) {
     verifier.satisfyGeneral(IdentifierVerifier);
     verifier.satisfyExact(`file = ${myFile}`);
     verifier.satisfyExact(`method = ${myMethod}`);
+
+    verifier.isValid(mySecret);
 }
 
 console.log(`Verified ${count} macaroons in ${noOfSeconds} seconds`)
@@ -98,7 +100,7 @@ while (performance.now() < start + noOfSeconds * 1000) {
     .add_first_party_caveat(`method = ${myMethod}`)
     .getMacaroon();
 
-    const auth = myMacaroon.serialize();
+    myMacaroon.serialize();
 }
 
 console.log(`Generated ${count} macaroons in ${noOfSeconds} seconds`);
@@ -155,12 +157,12 @@ console.log(`Generated ${count} macaroons in ${noOfSeconds} seconds`);
     let count = 0;
     let start = performance.now();
 
-    while (performance.now() < start + noOfSeconds * 1000) {
+   while (performance.now() < start + noOfSeconds * 1000) {
         count++;
         await verifyDpopProof(publicThumbprint, accessProof, alg, {
-            webid: `${location}jesse/profile/card#me`,
+            /*webid: `${location}jesse/profile/card#me`,
             location: location,
-            aud: 'solid',
+            aud: 'solid',*/
             url: myUrl,
             method: myMethod
         });

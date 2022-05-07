@@ -1,6 +1,6 @@
 import { EmbeddedJWK, jwtVerify, calculateJwkThumbprint }from 'jose'
 
-export async function verifyDpopProof(publicJwkThumb, dpopProof, alg, {webid, location, url, method}) {
+export async function verifyDpopProof(publicJwkThumb, dpopProof, alg, {url, method}) {
     const { payload, protectedHeader } = await jwtVerify(dpopProof, EmbeddedJWK, {
         typ: 'dpop+jwt',
         algorithms: [alg],
@@ -9,16 +9,16 @@ export async function verifyDpopProof(publicJwkThumb, dpopProof, alg, {webid, lo
     });
     
     // Check if required properties exist
-    if (!(typeof payload.jti === 'string' && payload.jti)) {
+    /*if (!(typeof payload.jti === 'string' && payload.jti)) {
         throw new InvalidDpopProofError("Failed to verify JWT: missing jti field");
-    }
+    }*/
     if(!(typeof payload.htu === 'string' && payload.htu)) {
         throw new InvalidDpopProofError("Failed to verify JWT: missing htu field");
     }
     if(!(typeof payload.htm === 'string' && payload.htm)) {
         throw new InvalidDpopProofError("Failed to verify JWT: missing htm field");
     }
-    if(!(typeof payload.webid === 'string' && payload.webid)) {
+    /*if(!(typeof payload.webid === 'string' && payload.webid)) {
         throw new InvalidDpopProofError("Failed to verify JWT: missing webid field");
     }
     if(!(typeof payload.aud === 'string' && payload.aud)) {
@@ -26,7 +26,7 @@ export async function verifyDpopProof(publicJwkThumb, dpopProof, alg, {webid, lo
     }
     if(!(typeof payload.iss === 'string' && payload.iss)) {
         throw new InvalidDpopProofError("Failed to verify JWT: missing iss field");
-    }
+    }*/
     if(!(typeof payload.exp === 'number' && payload.exp)) {
         throw new InvalidDpopProofError("Failed to verify JWT: missing exp field");
     }
@@ -41,7 +41,7 @@ export async function verifyDpopProof(publicJwkThumb, dpopProof, alg, {webid, lo
     if(!(payload.htm == method)) {
         throw new InvalidDpopProofError("Failed to verify JWT: invalid method");
     }
-    if(!(payload.iss == location)) {
+    /*if(!(payload.iss == location)) {
         throw new InvalidDpopProofError("Failed to verify JWT: invalid location");
     }
     if(!(payload.aud == "solid")) {
@@ -49,7 +49,7 @@ export async function verifyDpopProof(publicJwkThumb, dpopProof, alg, {webid, lo
     }
     if(!(payload.webid == webid)) {
         throw new InvalidDpopProofError("Failed to verify JWT: invalid webid");
-    }
+    }*/
 
 
     // Check if key thumbprint is correct    
