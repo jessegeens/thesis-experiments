@@ -61,7 +61,7 @@ const identifier = uuid();
 let myMacaroon = MacaroonsBuilder.create(location, mySecret, identifier);
     
 myMacaroon = MacaroonsBuilder.modify(myMacaroon)
-    .add_first_party_caveat("time < " + (Date.now() + 1000 * (noOfSeconds + 10)))
+    .add_first_party_caveat("time < " + (Date.now() + 1000 * (noOfSeconds + 10) * repeat))
     .add_first_party_caveat(`file = ${myFile}`)
     .add_first_party_caveat(`method = ${myMethod}`)
     .getMacaroon();
@@ -108,7 +108,7 @@ console.log(`=== Generate Macaroon ===`)
             let myMacaroon = MacaroonsBuilder.create(location, mySecret, uuid());
     
             myMacaroon = MacaroonsBuilder.modify(myMacaroon)
-            .add_first_party_caveat("time < " + (Date.now() + 1000 * (noOfSeconds + 10)))
+            .add_first_party_caveat("time < " + (Date.now() + 1000 * (noOfSeconds + 10) * repeat))
             .add_first_party_caveat(`file = ${myFile}`)
             .add_first_party_caveat(`method = ${myMethod}`)
             .getMacaroon();
@@ -160,7 +160,7 @@ if (runExp4) {
             webid: `${location}jesse/profile/card#me`,
             iss: location,
             aud: 'solid',
-            exp: Date.now() + (noOfSeconds + 10) * 1000,
+            exp: Date.now() + (noOfSeconds + 10) * 1000 * repeat,
         }
     );
 
@@ -222,7 +222,7 @@ if (runExp6) {
             webid: `${location}jesse/profile/card#me`,
             iss: location,
             aud: 'solid',
-            exp: Date.now() + (noOfSeconds + 10) * 1000,
+            exp: Date.now() + (noOfSeconds + 10) * 1000 * repeat,
         }
     );
 

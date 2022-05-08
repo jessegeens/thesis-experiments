@@ -4,7 +4,7 @@ export async function verifyDpopProof(publicJwkThumb, dpopProof, alg, {url, meth
     const { payload, protectedHeader } = await jwtVerify(dpopProof, EmbeddedJWK, {
         typ: 'dpop+jwt',
         algorithms: [alg],
-        maxTokenAge: '60s',
+        maxTokenAge: '1000s',
         clockTolerance: '5s'
     });
     
